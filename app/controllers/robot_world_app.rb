@@ -6,5 +6,8 @@ class RobotWorldApp < Sinatra::Base
   get '/robots' do
     erb :index
   end
-end
 
+  get '/robots/new' do
+    erb :new_robot
+  end
+end
