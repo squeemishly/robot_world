@@ -21,7 +21,7 @@ class RobotWorldApp < Sinatra::Base
   post '/robots' do
     robot = Robot.new(params)
     robot.save
-    binding.pry
+
     erb :index
   end
 end
