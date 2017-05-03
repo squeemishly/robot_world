@@ -1,8 +1,8 @@
 <h1>My Robots</h1>
 
 <% @robots.each do |robot| %>
-  <h3>MY NAME IS: <%= robot.name %></h3>
-  <p>I OCCUPY <%= robot.city %></p>
-  <p>WHICH IS IN <%= robot.state %></p>
-  <p>I WORK IN <%= robot.department %></p>
+  <h3>THIS UNIT'S NAME IS: <%= robot.name %></h3>
+  <p>IT OCCUPIES: <%= robot.city %></p>
+  <p>WHICH IS IN: <%= robot.state %></p>
+  <p>THIS UNIT'S JOB IS: <%= robot.department %></p>
 <% end %>

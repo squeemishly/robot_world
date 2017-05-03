@@ -14,7 +14,6 @@ class RobotWorldApp < Sinatra::Base
 
   get '/robots' do
     @robots = Robot.all
-
     erb :index
   end
 
@@ -26,5 +25,10 @@ class RobotWorldApp < Sinatra::Base
     robot = Robot.new(params)
     robot.save
     redirect '/robots'
+  end
+
+  get '/robot/:id' do
+    @robot = Robot.find(params[:id])
+    erb :one_robot
   end
 end
