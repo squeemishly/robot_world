@@ -31,4 +31,15 @@ class RobotWorldApp < Sinatra::Base
     @robot = Robot.find(params[:id])
     erb :one_robot
   end
+
+  get '/robot/:id/edit' do
+    @robot = Robot.find(params[:id])
+    erb :edit_robot
+  end
+
+  set :method_override, true
+  put '/robot/:id' do |id|
+    Robot.update(id.to_i, params)
+    redirect '/robot/#{id}'
+  end
 end

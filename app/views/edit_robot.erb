@@ -1,0 +1,14 @@
+<h1>THIS UNIT NEEDS REPAIRS. PLEASE TO UPDATE STATUS.</h1>
+
+<form method="Post" action="/robot/<%= @robot.id %>">
+  <input type="hidden" name="_method" value="PUT" />
+  <p>NAME:</p>
+    <input type="text" name="robot[name]" value="<%= @robot.name %>"><br/>
+  <p>CITY:</p>
+    <input type="text" name="robot[city]" value="<%= @robot.city %>"><br/>
+  <p>STATE:</p>
+    <input type="text" name="robot[state]" value="<%= @robot.state %>"><br/>
+  <p>DEPARTMENT:</p>
+    <input type="text" name="robot[department]" value="<%= @robot.department %>"><br/>
+  <input type="submit" value="UPDATE">
+</form>
