@@ -41,10 +41,10 @@ class Robot
                           state = ?,
                           department = ?
                       WHERE id = ?;",
-                      robot_params["name"],
-                      robot_params["city"],
-                      robot_params["state"],
-                      robot_params["department"],
+                      robot_params["robot"]["name"],
+                      robot_params["robot"]["city"],
+                      robot_params["robot"]["state"],
+                      robot_params["robot"]["department"],
                       id)
     Robot.find(id)
   end

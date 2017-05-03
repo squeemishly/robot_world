@@ -40,6 +40,6 @@ class RobotWorldApp < Sinatra::Base
   set :method_override, true
   put '/robot/:id' do |id|
     Robot.update(id.to_i, params)
-    redirect '/robot/#{id}'
+    redirect "/robot/#{id}"
   end
 end
