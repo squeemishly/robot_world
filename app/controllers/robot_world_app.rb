@@ -8,6 +8,10 @@ class RobotWorldApp < Sinatra::Base
     erb :error
   end
 
+  get '/' do
+    erb :dashboard
+  end
+
   get '/robots' do
     @robots = Robot.all
 
@@ -21,7 +25,6 @@ class RobotWorldApp < Sinatra::Base
   post '/robots' do
     robot = Robot.new(params)
     robot.save
-
-    erb :index
+    redirect '/robots'
   end
 end
