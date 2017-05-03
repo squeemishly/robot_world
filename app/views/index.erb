@@ -5,5 +5,9 @@
   <p>IT OCCUPIES: <%= robot.city %></p>
   <p>WHICH IS IN: <%= robot.state %></p>
   <p>THIS UNIT'S JOB IS: <%= robot.department %></p>
-  <a href="/robot/<%= robot.id %>/edit">EDIT THIS UNIT</a>
+  <a href="/robot/<%= robot.id %>/edit">EDIT THIS UNIT</a><br/>
+  <form method="Post" action="/robot/<%= robot.id %>">
+    <input type="hidden" name="_method" value="Delete">
+    <input type="submit" value="DELETE THIS UNIT">
+  </form>
 <% end %>

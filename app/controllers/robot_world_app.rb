@@ -42,4 +42,9 @@ class RobotWorldApp < Sinatra::Base
     Robot.update(id.to_i, params)
     redirect "/robot/#{id}"
   end
+
+  delete '/robot/:id' do |id|
+    Robot.terminate(id.to_i)
+    redirect '/robots'
+  end
 end
